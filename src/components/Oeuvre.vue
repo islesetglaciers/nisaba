@@ -57,18 +57,18 @@ export default {
         /* color: white; */
     }
 
-    h3 {
+    .titres h3 {
         font-family: 'Cormorant Garamond', serif;
         font-weight: 700;
         font-style: italic;
         margin: 5px 0;
         padding-bottom: 5px;
-        font-size: 1.3em;
+        font-size: 1.5em;
         border-bottom: 1px solid #6b705c;
         transition: 0.3s;
     }
 
-    h3:hover {
+    .titres h3:hover {
         color: #e07a5f;
     }
 
@@ -83,6 +83,8 @@ export default {
     .resume {
         font-size: .75em;
         color: #a3a3a3;
+        padding: 0 10px;
+        text-align: justify;
         /* font-style: italic; */
     }
 
@@ -108,6 +110,7 @@ export default {
     .acces a {
         text-transform: lowercase;
         font-style: italic;
+        font-size: 1.1em;
     }
 
     .acces .note {

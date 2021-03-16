@@ -17,12 +17,11 @@ export default {
 
 <style>
     .oeuvres {
-        max-width: 80%;
+        max-width: 70%;
         padding-bottom: 20px;
-        margin: 50px auto;
+        margin: 0 auto;
         /* border-bottom: 1px solid #6b705c; */
         display: flex;
-        justify-items: space-around;
         justify-content: center;
         flex-wrap: wrap;
     }

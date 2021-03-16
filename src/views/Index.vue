@@ -17,8 +17,10 @@ export default {
 
 <style>
   .index {
+    min-height: 80vh;
+    margin-top: 50px;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: row;
   }
 </style>
