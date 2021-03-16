@@ -3,13 +3,18 @@
     <span>Nisaba</span>
     <div class="liens-nav">
       <router-link to="/">Index</router-link>
-      <router-link to="/about">À Propos</router-link>
+      <router-link to="/ajouter">Ajouter une oeuvre</router-link>
+      <router-link to="/a-propos">À Propos</router-link>
     </div>
   </div>
   <router-view/>
 </template>
 
 <style>
+body {
+  margin: 0 auto;
+}
+
 #app {
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,700&family=Fira+Sans:wght@300;400&display=swap');
   font-family: 'Fira sans', sans-serif;
