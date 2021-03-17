@@ -1,9 +1,6 @@
 <template>
-  <div class="oeuvres">
-      <Oeuvre />
-      <Oeuvre />
-      <Oeuvre />
-      <Oeuvre />
+  <div class="oeuvres" v-for="oeuvre in oeuvres" :key="oeuvre.id">
+      <Oeuvre :oeuvre="oeuvre" />
   </div>
 </template>
 
@@ -11,7 +8,8 @@
 import Oeuvre from './Oeuvre.vue'
 
 export default {
-    components: { Oeuvre }
+    components: { Oeuvre },
+    props: ['oeuvres']
 }
 </script>
 

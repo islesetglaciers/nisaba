@@ -1,23 +1,27 @@
 <template>
   <div class="oeuvre">
-      <div class="titres">
-          <h3>Titre de l'oeuvre</h3>
-          <p>Nom de l'auteur.ice</p>
+      <div class="titres" :class="{ fav: oeuvre.fav }">
+          <h3>{{ oeuvre.titre }}</h3>
+          <p>{{ oeuvre.auteur }}</p>
       </div>
       <div class="details">
-        <p class="resume">Résumé de l'histoire... Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem vitae fugiat officiis excepturi magni et cupiditate pariatur asperiores velit. Delectus mollitia ducimus blanditiis modi debitis.</p>
+        <p class="resume">{{ oeuvre.resume }}</p>
         <div class="acces">
-          <a href="#" class="lien">Lien</a> |
-          <span class="note">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="far fa-star"></i>
-            <i class="far fa-star"></i>
+          <a :href="oeuvre.lien" target="_blank" class="lien" v-if="oeuvre.lien">{{ oeuvre.nomLien }}</a>
+          <span v-if="oeuvre.lien"> | </span>
+          <span class="note" v-if="oeuvre.eval">
+            <i class="fas fa-star" v-for="i in oeuvre.eval"></i>
+            <i class="far fa-star" v-for="i in (5 - oeuvre.eval)"></i>
           </span>
         </div>
         <div class="tags">
-            <span class="tag">Genre</span><span class="tag"># Mots</span><span class="tag">Type</span><span class="tag">Fandom</span>
+            <span class="tag">{{ oeuvre.type }}</span>
+            <span class="tag">{{ oeuvre.genre }}</span>
+            <span class="tag" v-if="oeuvre.nbMots">{{ oeuvre.nbMots }}</span>
+            <span class="tag" v-if="oeuvre.fandom">{{ oeuvre.fandom }}</span>
+            <span class="tag" v-if="oeuvre.pairing">{{ oeuvre.pairing }}</span>
+            <span class="tag" v-if="oeuvre.tags" v-for="tag in oeuvre.tags">{{ tag }}</span>
+            
         </div>
       </div>
   </div>
@@ -25,6 +29,7 @@
 
 <script>
 export default {
+    props: ['oeuvre'],
     data() {
         return {
             afficherDetails: false
@@ -46,7 +51,7 @@ export default {
     }
 
     .titres {
-        cursor: pointer;
+        /* cursor: pointer; */
         background: #f7f7f7;
         padding: 10px;
         border-radius: 3px;
@@ -68,9 +73,9 @@ export default {
         transition: 0.3s;
     }
 
-    .titres h3:hover {
+    /* .titres:hover h3 {
         color: #e07a5f;
-    }
+    } */
 
     .titres p {
         margin: 5px 0;
@@ -130,13 +135,13 @@ export default {
         padding: 5px;
         font-size: 0.7em;
         display: flex;
-        justify-content: center;
-        /* align-items: center; */
-        /* flex-wrap: wrap; */
+        /* justify-content: center; */
+        align-items: flex-start;
+        flex-wrap: wrap;
     }
 
     .tag {
-        margin: 0 5px;
+        margin: 3px 5px;
         padding: 5px 10px;
         border-radius: 5px;
         background: #a5a58d;
