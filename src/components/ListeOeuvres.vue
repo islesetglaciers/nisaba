@@ -1,6 +1,6 @@
 <template>
-  <div class="oeuvres" v-for="oeuvre in oeuvres" :key="oeuvre.id">
-      <Oeuvre :oeuvre="oeuvre" />
+  <div class="oeuvres">
+      <Oeuvre :oeuvre="oeuvre" v-for="oeuvre in oeuvres" :key="oeuvre.id" />
   </div>
 </template>
 

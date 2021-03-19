@@ -17,7 +17,7 @@
         <div class="tags">
             <span class="tag">{{ oeuvre.type }}</span>
             <span class="tag">{{ oeuvre.genre }}</span>
-            <span class="tag" v-if="oeuvre.nbMots">{{ oeuvre.nbMots }}</span>
+            <span class="tag" v-if="oeuvre.nbMots">{{ oeuvre.nbMots }} mots</span>
             <span class="tag" v-if="oeuvre.fandom">{{ oeuvre.fandom }}</span>
             <span class="tag" v-if="oeuvre.pairing">{{ oeuvre.pairing }}</span>
             <span class="tag" v-if="oeuvre.tags" v-for="tag in oeuvre.tags">{{ tag }}</span>
@@ -42,6 +42,7 @@ export default {
 <style>
     .oeuvre {
         width: 300px;
+        height: 100%;
         padding: 10px;
         margin: 10px;
         background-color: #fff;
