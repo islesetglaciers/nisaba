@@ -29,13 +29,7 @@
 
 <script>
 export default {
-    props: ['oeuvre'],
-    data() {
-        return {
-            afficherDetails: false
-        }
-        
-    }
+    props: ['oeuvre']
 }
 </script>
 

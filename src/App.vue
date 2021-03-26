@@ -16,6 +16,9 @@
   body {
     margin: 0 auto;
   }
+  html {
+    background: #f4f1de;
+  }
 
   #app {  
     font-family: 'Fira sans', sans-serif;
@@ -23,7 +26,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #737373;
-    background-color: #f4f1de;
+    /* background-color: #f4f1de; */
     min-height: 100vh;
   }
 
@@ -68,4 +71,12 @@
     border-bottom: 1px solid #e07a5f;
     font-style: italic;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  background: #cb997e; 
+}
 </style>
