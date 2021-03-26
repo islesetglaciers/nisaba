@@ -10,6 +10,7 @@
 
         <label for="resume-txt">Résumé :</label>
         <textarea v-model.lazy="resume" id="resume-txt"></textarea>
+        <div class="specs">Un paragraphe max.</div>
 
         <label for="genre-oeuvre">Genre :</label>
         <input type="text" v-model="genre" id="genre-oeuvre">
@@ -55,7 +56,7 @@
 
         <label for="tags">Tags additionnels :</label>
         <input type="text" v-model="tempTag" id="tags" @keyup="ajouterTag">
-        <div class="spec-tags">Séparer chaque "tag" par des virgules</div>
+        <div class="specs">Séparer chaque "tag" par des virgules</div>
         <div class="les-tags" v-for="tag in tags" :key="tag">
             <span @click="enleverTag(tag)">{{ tag }}</span>
         </div>  
@@ -184,7 +185,7 @@ input[type="checkbox"] {
     margin-left: 50px;
 }
 
-.spec-tags {
+.specs {
     font-size: .6em;
     text-transform: uppercase;
     color: #ddd;
