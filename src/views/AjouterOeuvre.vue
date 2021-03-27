@@ -12,14 +12,24 @@
         <textarea v-model.lazy="resume" id="resume-txt"></textarea>
         <div class="specs">Un paragraphe max.</div>
 
-        <label for="genre-oeuvre">Genre :</label>
-        <input type="text" v-model="genre" id="genre-oeuvre">
         <div class="input-liens">
-            <div class="input-lien">
+            <div class="input-gr">
+                <label for="genre-oeuvre">Genre :</label>
+                <input type="text" v-model="genre" id="genre-oeuvre">
+            </div>
+            
+            <div class="input-gr">
+                <label for="rating-oeuvre">Classement :</label>
+                <input type="text" v-model="rating" id="rating-oeuvre">  
+            </div>
+        </div>
+        
+        <div class="input-liens">
+            <div class="input-gr">
                 <label for="lien-oeuvre">Lien :</label>
                 <input type="url" v-model="lien" id="lien-oeuvre" autocomplete="off">
             </div>
-            <div class="input-lien">
+            <div class="input-gr">
                 <label for="nom-lien">Nom du lien :</label>
                 <input type="text" v-model="nomLien" id="nom-lien">
             </div>
@@ -81,6 +91,7 @@ export default {
             nomLien: '',
             fav: false,
             type: '',
+            rating: '',
             pairing: '',
             fandom: '',
             nbMots: '',
@@ -179,11 +190,11 @@ input[type="checkbox"] {
     justify-content: space-around;
     align-items: center;
 }
-.input-eval, .input-lien {
+.input-eval, .input-gr {
     width: 100%;
 }
 
-.input-eval:last-of-type, .input-lien:last-of-type {
+.input-eval:last-of-type, .input-gr:last-of-type {
     margin-left: 50px;
 }
 

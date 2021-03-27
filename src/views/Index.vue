@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <Filtres @changementFiltre="courant = $event" :courant="courant"  :genres="genres" :pairings="pairings" :fandoms="fandoms" :tags="tags" />
+    <Filtres @changementFiltre="courant = $event" :courant="courant"  :genres="genres" :relations="relations" :fandoms="fandoms" :tags="tags" />
     <ListeOeuvres :oeuvres="oeuvresFiltrees" />
   </div>
   <Footer />
@@ -20,14 +20,6 @@ export default {
       courant: 'tous',
       catFiltre: ''
     }
-  },
-  methods: {
-    // filtrerOeuvres(...args) {
-    //   var [par, categorie] = args
-    //   this.courant === par
-    //   this.catFiltre === categorie
-    //   console.log(par, categorie)
-    // }
   },
   computed: {
     oeuvres() {
@@ -54,14 +46,16 @@ export default {
       });
       return genres
     },
-    pairings() {
-      var pairings = []
+    relations() {
+      var relations = []
       this.oeuvres.forEach(oeuvre => {
-        if (!pairings.includes(oeuvre.pairing) && oeuvre.pairing !== '') {
-          pairings.push(oeuvre.pairing)
-        }
+        oeuvre.pairings.forEach(pair => {
+          if (!relations.includes(pair) && pair !== '') {
+            relations.push(pair)
+          }
+        })
       });
-      return pairings
+      return relations
     },
     fandoms() {
       var fandoms = []

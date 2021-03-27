@@ -40,12 +40,12 @@
           :key="fandom">{{ fandom }}</li>
         </ul>
       </div>
-      <div class="categorie" v-if="pairings.length">
-        <p>Pairings</p>
+      <div class="categorie" v-if="relations.length">
+        <p>Relations</p>
         <ul>
           <li
-          v-for="pairing in pairings"
-          :key="pairing">{{ pairing }}</li>
+          v-for="pair in relations"
+          :key="pair">{{ pair }}</li>
         </ul>
       </div>
       <div class="categorie" v-if="tags.length">
@@ -63,11 +63,11 @@
 
 <script>
 export default {
-  props: ['courant', 'genres', 'fandoms', 'pairings', 'tags'],
+  props: ['courant', 'genres', 'fandoms', 'relations', 'tags'],
   methods: {
-    changerFiltre(par, categorie = '') {
-      console.log('Emitting changementFiltre par :', par, categorie)
-      this.$emit('changementFiltre', par, categorie)
+    changerFiltre(par) {
+      // console.log('Emitting changementFiltre par :', par, categorie)
+      this.$emit('changementFiltre', par)
     }
   }
 
@@ -78,13 +78,12 @@ export default {
   .filtres {
     min-width: 250px;
     max-width: 300px;
-    margin: 0;
-    margin-left: 50px;
+    margin: 0 50px 100px 50px;
     position: fixed;
   }
 
   .categories {
-    margin-top: 40%;
+    margin-top: 15%;
     background: #fff;
     padding: 30px;
     border-radius: 5px;
@@ -93,7 +92,7 @@ export default {
     text-align: left;
     font-size: 0.9em;
     box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
-    max-height: 500px;
+    max-height: 450px;
     overflow-y: scroll;
   }
 
@@ -135,6 +134,18 @@ export default {
     text-transform: lowercase;
     color: #cb977e;
     margin: 3px;
+  }
+
+  .categories li::before {
+    /* content: '\00BB'; */
+    content: '\2027';
+    margin-right: 5px;
+    color: #6b705c;
+    font-weight: 400;
+  }
+
+  .categories li::before:hover {
+    font-weight: 400;
   }
 
   .categories li:hover {

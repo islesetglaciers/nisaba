@@ -19,7 +19,7 @@
             <span class="tag">{{ oeuvre.genre }}</span>
             <span class="tag" v-if="oeuvre.nbMots">{{ oeuvre.nbMots }} mots</span>
             <span class="tag" v-if="oeuvre.fandom">{{ oeuvre.fandom }}</span>
-            <span class="tag" v-if="oeuvre.pairing">{{ oeuvre.pairing }}</span>
+            <span class="tag" v-if="oeuvre.pairings" v-for="pair in oeuvre.pairings">{{ pair }}</span>
             <span class="tag" v-if="oeuvre.tags" v-for="tag in oeuvre.tags" :key="tag">{{ tag }}</span>
             
         </div>
@@ -133,6 +133,12 @@ export default {
         /* justify-content: center; */
         align-items: flex-start;
         flex-wrap: wrap;
+        max-height: 75px;
+        overflow-y: scroll;
+    }
+
+    .tags::-webkit-scrollbar {
+        width: 2px;
     }
 
     .tag {
