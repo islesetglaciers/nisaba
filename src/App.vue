@@ -65,6 +65,11 @@
     padding-bottom: 5px;
   }
 
+  #nav a:hover {
+    color: #e07a5f;
+    transition: .5s;
+  }
+
   #nav a.router-link-exact-active {
     color: #e07a5f;
     font-weight: 700;

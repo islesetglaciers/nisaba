@@ -10,10 +10,10 @@
           :class="{ actif: courant === 'tous' }">Tous</li>
           <li
           @click="changerFiltre('Livre')" 
-          :class="{ actif: courant === 'Livre' }">Livre</li>
+          :class="{ actif: courant === 'Livre' }">Livres</li>
           <li
           @click="changerFiltre('Fanfiction')" 
-          :class="{ actif: courant === 'Fanfiction' }">Fanfic</li>
+          :class="{ actif: courant === 'Fanfiction' }">Fanfiction</li>
         </ul>
       </div>
       <div class="categorie">
@@ -78,7 +78,9 @@ export default {
   .filtres {
     min-width: 250px;
     max-width: 300px;
-    margin: 0 auto;
+    margin: 0;
+    margin-left: 50px;
+    position: fixed;
   }
 
   .categories {

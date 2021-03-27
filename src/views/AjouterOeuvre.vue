@@ -29,6 +29,7 @@
             <div class="input-eval">
                 <label for="eval-oeuvre">Évaluation (sur 5) :</label>
                 <input type="number" v-model.number="eval" id="eval-oeuvre" min="0" max="5" step="1">
+                <div class="specs">Chiffres ronds seulement</div>
             </div>
 
             <div class="input-eval">
@@ -57,8 +58,9 @@
         <label for="tags">Tags additionnels :</label>
         <input type="text" v-model="tempTag" id="tags" @keyup="ajouterTag">
         <div class="specs">Séparer chaque "tag" par des virgules</div>
+        <div class="specs">Si vous voulez pouvoir filtrer selon ces tags, ils doivent avoir une longueur de 15 caractères maximum</div>
         <div class="les-tags" v-for="tag in tags" :key="tag">
-            <span @click="enleverTag(tag)">{{ tag }}</span>
+            <span @click="enleverTag(tag)">{{ tag }} <span>x</span></span>
         </div>  
         <div class="soumettre">
             <button>Ajouter</button>
@@ -202,6 +204,10 @@ input[type="checkbox"] {
     letter-spacing: 1px;
     color: white;
     cursor: pointer;
+}
+
+.les-tags span span {
+    color: #e07a5f;
 }
 .soumettre {
     width: 100%;
