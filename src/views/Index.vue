@@ -1,6 +1,6 @@
 <template>
   <div class="index">
-    <Filtres @changementFiltre="courant = $event" :courant="courant"  :genres="genres" :relations="relations" :fandoms="fandoms" :tags="tags" />
+    <Filtres @changementFiltre="courant = $event" :courant="courant"  :genres="genres" :relations="relations" :fandoms="fandoms" :tags="tags" :ratings="ratings" />
     <ListeOeuvres :oeuvres="oeuvresFiltrees" />
   </div>
   <Footer />
@@ -45,6 +45,16 @@ export default {
         }
       });
       return genres
+    },
+    ratings() {
+      var ratings = []
+      this.oeuvres.forEach(oeuvre => {
+        if (!ratings.includes(oeuvre.rating) && oeuvre.rating !== '') {
+          ratings.push(oeuvre.rating)
+        }
+      });
+      console.log(ratings)
+      return ratings
     },
     relations() {
       var relations = []

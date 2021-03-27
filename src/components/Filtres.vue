@@ -25,6 +25,14 @@
         </ul>
       </div>
       <div class="categorie">
+        <p>Classement</p>
+        <ul>
+          <li
+          v-for="rating in ratings"
+          :key="rating">{{ rating }}</li>
+        </ul>
+      </div>
+      <div class="categorie">
         <p>Genre</p>
         <ul>
           <li
@@ -63,7 +71,7 @@
 
 <script>
 export default {
-  props: ['courant', 'genres', 'fandoms', 'relations', 'tags'],
+  props: ['courant', 'genres', 'fandoms', 'relations', 'tags', 'ratings'],
   methods: {
     changerFiltre(par) {
       // console.log('Emitting changementFiltre par :', par, categorie)
