@@ -20,7 +20,7 @@
             <span class="tag" v-if="oeuvre.nbMots">{{ oeuvre.nbMots }} mots</span>
             <span class="tag" v-if="oeuvre.fandom">{{ oeuvre.fandom }}</span>
             <span class="tag" v-if="oeuvre.pairing">{{ oeuvre.pairing }}</span>
-            <span class="tag" v-if="oeuvre.tags" v-for="tag in oeuvre.tags">{{ tag }}</span>
+            <span class="tag" v-if="oeuvre.tags" v-for="tag in oeuvre.tags" :key="tag">{{ tag }}</span>
             
         </div>
       </div>
