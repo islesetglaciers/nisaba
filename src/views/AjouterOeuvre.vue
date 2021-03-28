@@ -240,6 +240,7 @@ button {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
     font-style: italic;
+    cursor: not-allowed;
 
 }
 
