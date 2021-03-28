@@ -1,19 +1,17 @@
 # nisaba
+Projet de recherche sur le framework VueJS
+* Session hiver 2021 *
 
-## Project setup
-```
-npm install
-```
+## Views
+- Index :
+* Contient la liste des oeuvres et les filtres *
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- AjouterOeuvre :
+* Formulaire dynamique qui permet à l'utilisateur.ice d'ajouter une oeuvre, **pas fonctionnel** *
 
-### Compiles and minifies for production
-```
-npm run build
-```
+- APropos :
+* Information sur le nom et le concept *
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+> Sidd Benoît | 2021
+
+
