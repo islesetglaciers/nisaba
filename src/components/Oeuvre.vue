@@ -37,7 +37,9 @@ export default {
 <style>
     .oeuvre {
         width: 300px;
-        height: 100%;
+        /* height: 100%; */
+        /* height: 300px;
+        overflow-y: scroll; */
         padding: 10px;
         margin: 10px;
         background-color: #fff;
@@ -81,12 +83,19 @@ export default {
         letter-spacing: .3em;
     }
 
+    .details {
+        height: 200px;
+        overflow-y: scroll;
+    }
+
     .resume {
         font-size: .75em;
         color: #a3a3a3;
         padding: 0 10px;
         text-align: justify;
         /* font-style: italic; */
+        /* max-height: 75px; */
+        /* overflow-y: scroll; */
     }
 
     .acces {
@@ -134,11 +143,11 @@ export default {
         /* justify-content: center; */
         align-items: flex-start;
         flex-wrap: wrap;
-        max-height: 75px;
-        overflow-y: scroll;
+        /* max-height: 50px; */
+        /* overflow-y: scroll; */
     }
 
-    .tags::-webkit-scrollbar {
+    .details::-webkit-scrollbar {
         width: 2px;
     }
 
