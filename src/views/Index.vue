@@ -8,7 +8,7 @@
 <script>
 import ListeOeuvres from '../components/ListeOeuvres.vue'
 import Filtres from '../components/Filtres.vue'
-import donneesOeuvres from '../assets/data.json'
+import donneesOeuvres from '../data/data.json'
 
 export default {
   name: 'Index',

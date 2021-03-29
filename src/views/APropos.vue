@@ -12,6 +12,9 @@
 </template>
 
 <style>
+.a-propos {
+  height: 80vh;
+}
 .a-propos h1 {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
