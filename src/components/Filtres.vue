@@ -9,10 +9,10 @@
           @click="changerFiltre('tous')" 
           :class="{ actif: courant === 'tous' }">Tous</li>
           <li
-          @click="changerFiltre('Livre')" 
+          @click="changerFiltre('Livre', 'type')" 
           :class="{ actif: courant === 'Livre' }">Livres</li>
           <li
-          @click="changerFiltre('Fanfiction')" 
+          @click="changerFiltre('Fanfiction', 'type')" 
           :class="{ actif: courant === 'Fanfiction' }">Fanfiction</li>
         </ul>
       </div>

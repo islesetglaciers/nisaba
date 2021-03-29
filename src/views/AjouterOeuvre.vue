@@ -56,8 +56,12 @@
 
         <div class="categories-fanfic" v-if="type === 'fanfic'">
             <label for="pairing-fic">Relation(s) :</label>
-            <input type="text" v-model="pairing" id="pairing-fic">
-
+            <input type="text" v-model="tempPair" id="pairing-fic" @keyup="ajouterPair">
+            <div class="specs">Séparer chaque relation par des virgules</div>
+            <div class="les-tags" v-for="pair in pairings" :key="pair">
+                <span @click="enleverPair(pair)">{{ pair }} <span>x</span></span>
+            </div>  
+            <br />
             <label for="fandom-fic">Fandom :</label>
             <input type="text" v-model="fandom" id="fandom-fic">
 
@@ -92,7 +96,8 @@ export default {
             fav: false,
             type: '',
             rating: '',
-            pairing: '',
+            tempPair: '',
+            pairings: [],
             fandom: '',
             nbMots: '',
             tempTag: '',
@@ -118,6 +123,22 @@ export default {
         enleverTag(tag) {
             this.tags = this.tags.filter((item) => {
                 return tag !== item
+            })
+        },
+        ajouterPair(e) {
+            console.log(e.key)
+            if (e.key === ',' && this.tempPair) {
+                this.tempPair = this.tempPair.slice(0, this.tempPair.indexOf(','))
+                if (!this.pairings.includes(this.tempPair)) {
+                    this.pairings.push(this.tempPair)
+                    // console.log(this.tags)
+                }
+                this.tempPair = '' 
+            }
+        },
+        enleverPair(pair) {
+            this.pairings = this.pairings.filter((item) => {
+                return pair !== item
             })
         }
     }
