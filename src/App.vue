@@ -8,7 +8,17 @@
     </div>
   </div>
   <router-view/>
+  <Footer />
 </template>
+
+<script>
+import Footer from './components/Footer.vue'
+
+export default {
+  components: { Footer }
+}
+</script>
+
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,700&family=Fira+Sans:wght@300;400;500&display=swap');

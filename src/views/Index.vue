@@ -3,18 +3,16 @@
     <Filtres @changementFiltre="courant = $event" :courant="courant"  :genres="genres" :relations="relations" :fandoms="fandoms" :tags="tags" :ratings="ratings" />
     <ListeOeuvres :oeuvres="oeuvresFiltrees" />
   </div>
-  <Footer />
 </template>
 
 <script>
 import ListeOeuvres from '../components/ListeOeuvres.vue'
 import Filtres from '../components/Filtres.vue'
 import donneesOeuvres from '../assets/data.json'
-import Footer from '../components/Footer.vue'
 
 export default {
   name: 'Index',
-  components: { ListeOeuvres, Filtres, Footer },
+  components: { ListeOeuvres, Filtres },
   data() {
     return {
       courant: 'tous',
