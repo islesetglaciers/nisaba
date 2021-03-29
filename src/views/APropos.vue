@@ -13,7 +13,7 @@
 
 <style>
 .a-propos {
-  height: 80vh;
+  height: 75vh;
 }
 .a-propos h1 {
   font-family: 'Cormorant Garamond', serif;
