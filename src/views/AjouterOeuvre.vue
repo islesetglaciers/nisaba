@@ -55,7 +55,7 @@
         </select>
 
         <div class="categories-fanfic" v-if="type === 'fanfic'">
-            <label for="pairing-fic">Pairing :</label>
+            <label for="pairing-fic">Relation(s) :</label>
             <input type="text" v-model="pairing" id="pairing-fic">
 
             <label for="fandom-fic">Fandom :</label>

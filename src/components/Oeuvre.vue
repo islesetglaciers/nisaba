@@ -17,6 +17,7 @@
         <div class="tags">
             <span class="tag">{{ oeuvre.type }}</span>
             <span class="tag">{{ oeuvre.genre }}</span>
+            <span class="tag" v-if="oeuvre.rating">{{ oeuvre.rating }}</span>
             <span class="tag" v-if="oeuvre.nbMots">{{ oeuvre.nbMots }} mots</span>
             <span class="tag" v-if="oeuvre.fandom">{{ oeuvre.fandom }}</span>
             <span class="tag" v-if="oeuvre.pairings" v-for="pair in oeuvre.pairings">{{ pair }}</span>
