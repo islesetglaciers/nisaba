@@ -37,19 +37,14 @@ export default {
 <style>
     .oeuvre {
         width: 300px;
-        /* height: 100%; */
-        /* height: 300px;
-        overflow-y: scroll; */
         padding: 10px;
         margin: 10px;
         background-color: #fff;
         border-radius: 3px;
-        /* border: 1px solid #aaa; */
         box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
     .titres {
-        /* cursor: pointer; */
         background: #f7f7f7;
         padding: 10px;
         border-radius: 3px;
@@ -57,7 +52,6 @@ export default {
 
     .titres.fav {
         background: #ffe8d6; 
-        /* color: white; */
     }
 
     .titres h3 {
@@ -71,13 +65,8 @@ export default {
         transition: 0.3s;
     }
 
-    /* .titres:hover h3 {
-        color: #e07a5f;
-    } */
-
     .titres p {
         margin: 5px 0;
-        /* padding: 5px 0; */
         font-size: 0.75em;
         text-transform: uppercase;
         letter-spacing: .3em;
@@ -93,9 +82,6 @@ export default {
         color: #a3a3a3;
         padding: 0 10px;
         text-align: justify;
-        /* font-style: italic; */
-        /* max-height: 75px; */
-        /* overflow-y: scroll; */
     }
 
     .acces {
@@ -113,7 +99,6 @@ export default {
         font-family: 'Cormorant Garamond', serif;
         font-weight: 700;
         padding: 3px;
-        /* border-bottom: 1px solid #cb997e; */
         transition: 0.3s;
     }
 
@@ -140,11 +125,8 @@ export default {
         padding: 5px;
         font-size: 0.7em;
         display: flex;
-        /* justify-content: center; */
         align-items: flex-start;
         flex-wrap: wrap;
-        /* max-height: 50px; */
-        /* overflow-y: scroll; */
     }
 
     .details::-webkit-scrollbar {
@@ -156,9 +138,6 @@ export default {
         padding: 5px 10px;
         border-radius: 5px;
         background: #a5a58d;
-        /* cursor: pointer; */
         color: white;
     }
-
-
 </style>

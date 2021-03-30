@@ -26,6 +26,7 @@ export default {
   body {
     margin: 0 auto;
   }
+  
   html {
     background: #f4f1de;
   }
@@ -92,6 +93,6 @@ export default {
   }
 
   ::-webkit-scrollbar-thumb {
-  background: #cb997e; 
-}
+    background: #cb997e; 
+  }
 </style>

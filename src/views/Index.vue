@@ -17,29 +17,8 @@ export default {
     return {
       courant: 'tous',
       catFiltre: ''
-      // oeuvresFiltrees
     }
   },
-  // methods: {
-  //   filtrerOeuvres(...params) {
-  //     console.log(params)
-  //     const [par, categorie] = params
-  //     this.courant = par
-  //     this.catFiltre = categorie
-  //     console.log(this.courant, ca)
-  //     if (this.courant === 'favoris') {
-  //       this.oeuvresFiltrees = this.oeuvres.filter(oeuvre => oeuvre.fav)
-  //       return this.oeuvresFiltrees
-  //     }
-  //     if (this.courant === 'Livre') {
-  //       return this.oeuvres.filter(oeuvre => oeuvre.type === this.courant)
-  //     }
-  //     if (this.courant === 'Fanfiction') {
-  //       return this.oeuvres.filter(oeuvre => oeuvre.type === this.courant)
-  //     }
-  //     return this.oeuvres
-  //   }
-  // },
   computed: {
     oeuvres() {
       return donneesOeuvres.oeuvres
@@ -107,6 +86,26 @@ export default {
       return tags
     }
   }
+  // methods: {
+  //   filtrerOeuvres(...params) {
+  //     console.log(params)
+  //     const [par, categorie] = params
+  //     this.courant = par
+  //     this.catFiltre = categorie
+  //     console.log(this.courant, ca)
+  //     if (this.courant === 'favoris') {
+  //       this.oeuvresFiltrees = this.oeuvres.filter(oeuvre => oeuvre.fav)
+  //       return this.oeuvresFiltrees
+  //     }
+  //     if (this.courant === 'Livre') {
+  //       return this.oeuvres.filter(oeuvre => oeuvre.type === this.courant)
+  //     }
+  //     if (this.courant === 'Fanfiction') {
+  //       return this.oeuvres.filter(oeuvre => oeuvre.type === this.courant)
+  //     }
+  //     return this.oeuvres
+  //   }
+  // },
 }
 </script>
 
