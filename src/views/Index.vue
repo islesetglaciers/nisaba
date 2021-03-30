@@ -117,8 +117,4 @@ export default {
     align-items: flex-start;
     flex-direction: row;
   }
-
-  footer {
-    flex-direction: column;
-  }
 </style>

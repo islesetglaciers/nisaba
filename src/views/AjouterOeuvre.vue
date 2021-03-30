@@ -108,6 +108,7 @@ export default {
     methods: {
         ajouterOeuvre() {
             // console.log("Je veux ajouter l'oeuvre !")
+            // fetch POST
             this.$router.push('/')
         },
         ajouterTag(e) {
